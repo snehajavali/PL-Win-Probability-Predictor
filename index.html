@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>IPL Predictor</title>
-    <link rel="stylesheet" href="/static/style.css">
+    <title>IPL Win Probability Predictor</title>
+    <style>
+        body { font-family: Arial; background:#f4f6f9; text-align:center; }
+        form { background:white; padding:25px; width:380px; margin:auto; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+        input { margin:8px; padding:8px; width:90%; border-radius:6px; border:1px solid #ccc; }
+        button { padding:10px; background:#ff4d4d; color:white; border:none; border-radius:6px; cursor:pointer; }
+        button:hover { background:#e60000; }
+        h1 { margin-top:30px; }
+    </style>
 </head>
 <body>
-    <h1>IPL Performance Predictor</h1>
-    <form method="POST">
-        <label>Batting Team:</label><br>
-        <input name="batting_team"><br>
 
-        <label>Bowling Team:</label><br>
-        <input name="bowling_team"><br>
+<h1>🏏 IPL Win Probability Predictor</h1>
 
-        <label>City:</label><br>
-        <input name="city"><br>
+<form method="POST">
+    <input type="text" name="batting_team" placeholder="Batting Team" required>
+    <input type="text" name="bowling_team" placeholder="Bowling Team" required>
+    <input type="text" name="city" placeholder="City" required>
+    <input type="number" name="runs" placeholder="Runs" required>
+    <input type="number" step="0.1" name="overs" placeholder="Overs" required>
+    <input type="number" name="wickets" placeholder="Wickets" required>
+    <button type="submit">Predict</button>
+</form>
 
-        <label>Runs:</label><br>
-        <input type="number" name="runs"><br>
+{% if result %}
+    <h2>{{ result }}</h2>
+{% endif %}
 
-        <label>Overs:</label><br>
-        <input type="number" name="overs"><br>
-
-        <label>Wickets:</label><br>
-        <input type="number" name="wickets"><br>
-
-        <button type="submit">Predict</button>
-    </form>
-
-    {% if result %}
-        <h2>{{ result }}</h2>
-    {% endif %}
 </body>
 </html>

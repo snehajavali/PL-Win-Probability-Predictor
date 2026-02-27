@@ -1,0 +1,7 @@
+batting_team,bowling_team,city,runs,overs,wickets,match_winner
+Mumbai Indians,Chennai Super Kings,Mumbai,150,20,5,Mumbai Indians
+Chennai Super Kings,Mumbai Indians,Chennai,160,20,4,Chennai Super Kings
+Royal Challengers Bangalore,Kolkata Knight Riders,Bangalore,170,20,6,Royal Challengers Bangalore
+Kolkata Knight Riders,Royal Challengers Bangalore,Kolkata,155,20,7,Kolkata Knight Riders
+Delhi Capitals,Rajasthan Royals,Delhi,145,20,8,Delhi Capitals
+Rajasthan Royals,Delhi Capitals,Jaipur,165,20,5,Rajasthan Royals
